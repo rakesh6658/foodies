@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('checkoutscm') {
+            steps {
+                echo "checkout code from scm"
+            }
+        }
+        stage('build') {
+            steps {
+                echo "mvn clean verify"
+            }
+        }
+    }
+}
