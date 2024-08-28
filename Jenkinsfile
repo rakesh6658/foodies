@@ -8,8 +8,8 @@ pipeline{
         stage('checkout scm'){
             steps{
                 echo "checkout code from scm"
-                echo " name ${name}"
-                echo "version ${version}"
+                echo " name ${env.name}"
+                echo "version ${env.version}"
             }
         }
         stage('buuild'){
