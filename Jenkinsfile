@@ -17,5 +17,11 @@ pipeline{
                 echo "building the project"
             }
         }
+        stage('env variables'){
+            steps{
+                echo "build_number ${env.BUILD_NUMBER}"
+                echo "job_name  ${env.JOB_NAME}"
+            }
+        }
     }
 }
